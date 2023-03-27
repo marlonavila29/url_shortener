@@ -1,71 +1,29 @@
-# short-link-url
+# short-link-url2
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
-## Running the application in dev mode
+## Running the application
 
-You can run your application in dev mode that enables live coding using:
-```shell script
-./mvnw compile quarkus:dev
+Installation and Execution
+• Download the API source code.
+• Open the terminal and navigate to the root directory of the project.
+• Run the command in the terminal: ./mvnw quarkus:dev
+
+Open PostMan and fill in as shown below:
+
+<img width="1440" alt="Captura de Tela 2023-03-27 às 12 16 16" src="https://user-images.githubusercontent.com/12904290/227991565-80a28a75-a9bf-4444-b7e8-54585a981ad9.png">
+using this endpoint: http://localhost:8080/url/shorten
+
+and put some like this with JSON in the body:
+
 ```
-
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
-
-## Packaging and running the application
-
-The application can be packaged using:
-```shell script
-./mvnw package
+"longUrl":"https://www.google.com/search?q=o+desejado+de+todas+as+na%C3%A7%C3%B5es+pdf&sxsrf=APwXEdetSOCh9D7i6HcXWHG5JdvQIRRTWg%3A1679930150688&ei=JrMhZN_MKazS1sQP19aGoAI&oq=O+desejado+de&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgAMgQIIxAnMgUILhCABDIHCAAQigUQQzIHCAAQigUQQzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoHCCMQsAMQJzoKCAAQRxDWBBCwAzoKCAAQigUQsAMQQzoHCC4QigUQQ0oECEEYAFCYA1j0A2DNDWgBcAF4AIABdIgBzQKSAQMwLjOYAQCgAQHIAQrAAQE&sclient=gws-wiz-serp"![image](https://user-images.githubusercontent.com/12904290/227992193-d485f57b-be10-4aa0-8c57-b960935e8c25.png)
 ```
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
+The result will be some like this:
+"http://localhost:8080/url/yOlgaoeE3v"
 
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
-
-If you want to build an _über-jar_, execute the following command:
-```shell script
-./mvnw package -Dquarkus.package.type=uber-jar
-```
-
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
-
-## Creating a native executable
-
-You can create a native executable using: 
-```shell script
-./mvnw package -Pnative
-```
-
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
-```shell script
-./mvnw package -Pnative -Dquarkus.native.container-build=true
-```
-
-You can then execute your native executable with: `./target/short-link-url-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.
-
-## Related Guides
-
-- REST resources for Hibernate ORM with Panache ([guide](https://quarkus.io/guides/rest-data-panache)): Generate JAX-RS resources for your Hibernate Panache entities and repositories
-- Hibernate ORM with Panache and Kotlin ([guide](https://quarkus.io/guides/hibernate-orm-panache-kotlin)): Define your persistent model in Hibernate ORM with Panache
-- Kotlin ([guide](https://quarkus.io/guides/kotlin)): Write your services in Kotlin
-
-## Provided Code
-
-### Hibernate ORM
-
-Create your first JPA entity
-
-[Related guide section...](https://quarkus.io/guides/hibernate-orm)
-
-
-[Related Hibernate with Panache in Kotlin section...](https://quarkus.io/guides/hibernate-orm-panache-kotlin)
-
-### RESTEasy Reactive
-
-Easily start your Reactive RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+If you want open the long url, open new page in PostMan e put the short url as this way:
+<img width="1440" alt="Captura de Tela 2023-03-27 às 12 17 06" src="https://user-images.githubusercontent.com/12904290/227992857-4a4e75b2-f8a2-44c0-bf5e-e0298541e1db.png">
+So click SEND and you will be redirect to long url.
