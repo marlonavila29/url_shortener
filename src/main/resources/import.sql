@@ -1,0 +1,1 @@
+--insert into Url(id,shortUrl,longUrl) values(nextval('hibernate_sequence'),'HhsJhauwHsman124nHS','https://www.jdoodle.com/online-java-compiler/');
